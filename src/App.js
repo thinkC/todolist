@@ -21,16 +21,24 @@ function App() {
       setText("")
     }
   }
+
+  const removeTodo = (id) => {
+    // console.log(id)
+    let tempTodos = [...todos];
+    const removedItem = tempTodos.filter((item) => item.id !== id);
+    setTodos(removedItem);
+  }
   return (
     <div className="container">
       <h1 >Todo List App</h1>
       {todos && todos.map((todo) => {
-        return <TodoList key={todo.id} todo={todo} />
+        return <TodoList key={todo.id} todo={todo} removeTodo={removeTodo} />
       })}
       <AddTodoList
         text={text}
         setText={setText}
         handleSubmit={handleSubmit}
+
       />
     </div>
   );

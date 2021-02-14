@@ -4,14 +4,14 @@ import AddToList from '../components/AddTodoList';
 import AddTodoList from '../components/AddTodoList';
 
 
-const TodoList = ({ todo }) => {
+const TodoList = ({ todo, removeTodo }) => {
     const { id, text } = todo;
     return (
         <>
             <article>
                 <div className="todo-item">
                     <h2>{text}</h2>
-                    <FaTrashAlt />
+                    <FaTrashAlt onClick={() => { removeTodo(id) }} />
                 </div>
             </article>
 
