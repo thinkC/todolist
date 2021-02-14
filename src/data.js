@@ -10,6 +10,10 @@ const dataDB = [
     {
         id: 3,
         text: 'Watch movie'
+    },
+    {
+        id: 3,
+        text: 'Rest'
     }
 ]
 
