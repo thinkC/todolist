@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaPlus } from 'react-icons/fa';
 
 const AddToList = ({ text, setText, handleSubmit }) => {
 
@@ -14,7 +15,10 @@ const AddToList = ({ text, setText, handleSubmit }) => {
                     />
 
 
-                    <button className='btn' type='submit'>Add</button>
+                    <button className='btn' type='submit'>
+                        <FaPlus className="plus" />  add task
+
+                    </button>
                 </div>
             </form>
         </>

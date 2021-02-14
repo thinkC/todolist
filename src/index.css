@@ -1,9 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap');
+
 body {
   background-color: darkorchid;
 }
 
 h1{
   text-align: center;
+  font-family: 'Oxygen', sans-serif;
+  color: darkorchid;
+}
+p{
+  font-family: 'Oxygen', sans-serif;
 }
 .container{
   width: 90vw;
@@ -16,20 +23,10 @@ h1{
 }
 .todo-item{
   display: flex;
-  justify-content: space-around;
-  
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* .search-form{
-  width: 85vw;
-  margin: 0 auto;
-  max-width: 40rem;
-  background: #f1f5f8;
-  padding: 2rem 2.5rem;
-  text-transform: capitalize;
-  border-radius: 0.25rem;
-  box-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
-} */
 .form-control input {
   width: 100%;
   border: none;
@@ -48,4 +45,9 @@ h1{
   border-radius:0.25rem;
   background: darkorchid;
   color: #ffffff;
+  height: 45px;
+  text-transform: capitalize;
+}
+.plus{
+  margin-right: 20px;
 }
