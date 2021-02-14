@@ -11,7 +11,7 @@ const TodoList = ({ todo, removeTodo }) => {
             <article>
                 <div className="todo-item">
                     <p>{text}</p>
-                    <FaTrashAlt onClick={() => { removeTodo(id) }} />
+                    <FaTrashAlt className="trash" onClick={() => { removeTodo(id) }} />
                 </div>
             </article>
 
