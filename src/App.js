@@ -9,7 +9,7 @@ function App() {
   console.log(todos)
   return (
     <div className="container">
-      <h1 >Todo List</h1>
+      <h1 >Todo List App</h1>
       {todos && todos.map((todo) => {
         return <TodoList key={todo.id} todo={todo} />
       })}
