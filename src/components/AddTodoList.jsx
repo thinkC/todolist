@@ -9,7 +9,7 @@ const AddToList = ({ text, setText, handleSubmit }) => {
             <form onSubmit={handleSubmit} className='search-form'>
                 <div className='form-control'>
                     <input type="text"
-                        placeholder='add todo'
+                        placeholder='click here to add todo'
                         value={text}
                         onChange={(e) => setText(e.target.value)}
                     />
