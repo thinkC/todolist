@@ -1,21 +1,30 @@
 import React from 'react';
-import { FaTrashAlt } from 'react-icons/fa'
-import AddToList from '../components/AddTodoList';
-import AddTodoList from '../components/AddTodoList';
+import TodoListItem from '../components/TodoListItem'
 
 
-const TodoList = ({ todo, removeTodo }) => {
-    const { id, text } = todo;
+// const TodoList = ({ todo, removeTodo }) => {
+//     const { id, text } = todo;
+//     return (
+//         <>
+//             <article>
+//                 <div className="todo-item">
+//                     <p>{text}</p>
+//                     <FaTrashAlt className="trash" onClick={() => { removeTodo(id) }} />
+//                 </div>
+//             </article>
+
+
+//         </>
+//     )
+// }
+
+
+const TodoList = ({ todos, removeTodo }) => {
     return (
         <>
-            <article>
-                <div className="todo-item">
-                    <p>{text}</p>
-                    <FaTrashAlt className="trash" onClick={() => { removeTodo(id) }} />
-                </div>
-            </article>
-
-
+            {todos && todos.map((todo) => {
+                return <TodoListItem todo={todo} key={todo.id} removeTodo={removeTodo} />
+            })}
         </>
     )
 }

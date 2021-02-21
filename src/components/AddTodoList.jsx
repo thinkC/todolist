@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaPlus } from 'react-icons/fa';
 
-const AddToList = ({ text, setText, handleSubmit }) => {
+const AddToList = ({ text, setText, handleSubmit, todos }) => {
 
 
     return (
