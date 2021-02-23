@@ -14,7 +14,7 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('submit')
-    if (text) {
+    if (text && /^[a-zA-Z]+$/i.test(text)) {
       setTodos([
         ...todos,
         { id: new Date().getTime().toString(), text: text }
