@@ -2,11 +2,13 @@ import './App.css';
 import dataDB from '../src/data';
 import { useState } from 'react';
 import TodoList from './components/TodoList';
-import AddTodoList from './components/AddTodoList'
+import AddTodoList from './components/AddTodoList';
+import Alert from './components/Alert';
 
 function App() {
   const [todos, setTodos] = useState(dataDB);
-  const [text, setText] = useState('')
+  const [text, setText] = useState('');
+  const [alert, setAlert] = useState({ show: false });
 
   // console.log(todos[0].text)
 
@@ -19,7 +21,12 @@ function App() {
         ...todos,
         { id: new Date().getTime().toString(), text: text }
       ])
-      setText("")
+      setText("");
+      handleAlert({ type: 'success', text: 'task added' })
+    } else {
+      // console.log('no empty or illegal character is allowed');
+      setText("");
+      handleAlert({ type: 'danger', text: 'no empty or illegal character is allowed' })
     }
   }
 
@@ -29,12 +36,25 @@ function App() {
     const removedItem = tempTodos.filter((item) => item.id !== id);
     setTodos(removedItem);
   }
+
+  //handle alert
+  const handleAlert = ({ type, text }) => {
+    setAlert({ show: true, type, text });
+    setTimeout(() => {
+      setAlert({ show: false })
+    }, 3000)
+  }
+
+
   return (
     <div className="container">
+      {alert.show && <Alert type={alert.type} text={alert.text} />}
+
       <h1 >Todo List App </h1>
       {/* {todos && todos.map((todo) => {
         return <TodoList key={todo.id} todo={todo} removeTodo={removeTodo} />
       })} */}
+
 
       <TodoList todos={todos} removeTodo={removeTodo} />
       <AddTodoList

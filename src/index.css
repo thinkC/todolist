@@ -55,3 +55,19 @@ p{
   color: #ccc;
   cursor: pointer;
 }
+.alert{
+  padding: 0.75rem 1.25rem;
+  color: #ffffff;
+  text-align: center;
+  text-transform: capitalize;
+  width: 90%;
+  margin: 2rem auto 0 auto;
+  border-radius: 2px;
+  
+}
+.alert-danger{
+  background: #9b2915;
+}
+.alert-success{
+  background: #018e42;
+}
