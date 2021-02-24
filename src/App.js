@@ -24,7 +24,7 @@ function App() {
       setText("");
       handleAlert({ type: 'success', text: 'task added' })
     } else {
-      // console.log('no empty or illegal character is allowed');
+
       setText("");
       handleAlert({ type: 'danger', text: 'no empty or illegal character is allowed' })
     }
