@@ -23,6 +23,7 @@ describe('<App /> test', () => {
         userEvent.click(screen.getByText(/Add Task/i));
         // expect(screen.getByText(/Buy Bread/i)).toBeInTheDocument()
         expect(screen.queryByText(/^[a-zA-Z]+$/i)).toBeInTheDocument()
+
     });
 
     it('should not have empty character', () => {

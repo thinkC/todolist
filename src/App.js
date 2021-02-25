@@ -50,7 +50,7 @@ function App() {
     <div className="container">
       {alert.show && <Alert type={alert.type} text={alert.text} />}
 
-      <h1 >Todo List App </h1>
+      <h1 >Todo List App - Testing </h1>
       {/* {todos && todos.map((todo) => {
         return <TodoList key={todo.id} todo={todo} removeTodo={removeTodo} />
       })} */}
